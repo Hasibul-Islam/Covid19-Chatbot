@@ -1,0 +1,40 @@
+intents:
+  - greet
+  - goodbye
+  - corona_update
+  - corona_update_by_location
+  - city_info
+  - thanks
+
+actions:
+  - action_show_corona_update
+
+
+entities:
+  - city
+
+slots:
+  city:
+    type: text
+    auto_fill: True
+
+
+responses:
+  utter_greet:
+  - text: "Hey! I'm Corona Chatbot! "
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_ask_location:
+  - text: "Which country would you like me to find for?"
+
+  utter_finding_corona_update:
+  - text: "Please wait, I'm looking for {city}'s Corona Update!"
+
+  utter_you_are_welcome:
+  - text: "Good bye! Be safe."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
